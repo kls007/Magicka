@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{F6F402E5-F08C-7557-0FBD-7E07D275A1C3}") = "Magicka", "Assembly-CSharp.csproj", "{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}"
+EndProject
+Project("{F6F402E5-F08C-7557-0FBD-7E07D275A1C3}") = "Magicka", "Assembly-CSharp-Editor.csproj", "{0981E73E-FA31-8399-8746-9F6E8EEAD950}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0981E73E-FA31-8399-8746-9F6E8EEAD950}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0981E73E-FA31-8399-8746-9F6E8EEAD950}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0981E73E-FA31-8399-8746-9F6E8EEAD950}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0981E73E-FA31-8399-8746-9F6E8EEAD950}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

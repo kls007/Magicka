@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{87FE623F-F989-DA3F-2778-4677B4FDC22F}</ProjectGuid>
+    <ProjectGuid>{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -280,7 +280,7 @@
  <HintPath>D:/IDE/Unity5/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
  </Reference>
  <Reference Include="Debugger">
- <HintPath>D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/Plugins/Debugger.dll</HintPath>
+ <HintPath>D:/IDE/GitHubWorkSpace/Magicka/Assets/Plugins/Debugger.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

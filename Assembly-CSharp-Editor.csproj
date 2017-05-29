@@ -6,7 +6,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{665FE311-54B0-7628-7E8A-4CE74B447C0E}</ProjectGuid>
+    <ProjectGuid>{0981E73E-FA31-8399-8746-9F6E8EEAD950}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -68,7 +68,7 @@
      <None Include="Assets\LuaFramework\Resources\Effects\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
      <None Include="Assets\LuaFramework\ToLua\readme.txt" />
  <Reference Include="Assembly-UnityScript">
- <HintPath>D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+ <HintPath>D:/IDE/GitHubWorkSpace/Magicka/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/IDE/Unity5/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
@@ -95,7 +95,7 @@
  <HintPath>D:/IDE/Unity5/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
  <Reference Include="Debugger">
- <HintPath>D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/Plugins/Debugger.dll</HintPath>
+ <HintPath>D:/IDE/GitHubWorkSpace/Magicka/Assets/Plugins/Debugger.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>D:/IDE/Unity5/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
@@ -109,7 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{87FE623F-F989-DA3F-2778-4677B4FDC22F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+      <Project>{765837B5-B6FD-AFE4-ED6F-7C3DFE180475}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
