@@ -82,10 +82,11 @@ function print_t(t, name, indent)
     return logError(table_r(t,name or 'Value',indent or ''))
 end
 
-function OpenCtrl(ctrlName)
-    local ctrl = CtrlManager.GetCtrl(ctrlName);
+function OpenCtrl(ctrlName, ...)
+    local ctrl = CtrlManager.GetCtrl(ctrlName)
     if ctrl ~= nil then
-        ctrl:Awake();
+        -- ctrl:Awake(obj)
+        ctrl.Awake(...)
         return ctrl
     end
     return nil

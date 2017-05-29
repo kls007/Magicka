@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 484600}
   - 198: {fileID: 19877182}
   - 199: {fileID: 19941206}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 457760}
   - 198: {fileID: 19827200}
   - 199: {fileID: 19929012}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: star1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 4: {fileID: 432350}
   - 198: {fileID: 19851714}
   - 199: {fileID: 19967314}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: star
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -6,7 +6,15 @@ function TestKLS:TestQ()
 
 	-- print_t(Util.DataPath, "Get_M2Data()")
 
-OpenCtrl(CtrlNames.Reward)
+-- OpenCtrl(CtrlNames.Reward, 111, 222)
+
+-- RewardCtrl.Awake('swsw')
+
+-- print_t(RewardCtrl.Awake, '1111')
+
+-- "10003", 250
+
+OpenCtrl(CtrlNames.Reward, {"2", "3", "4"})
 
 	-- print_t(os.time(), 'os')
 

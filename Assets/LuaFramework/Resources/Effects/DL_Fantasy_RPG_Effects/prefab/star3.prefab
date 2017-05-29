@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 483160}
   - 198: {fileID: 19867492}
   - 199: {fileID: 19979428}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: star3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 4: {fileID: 497818}
   - 198: {fileID: 19866290}
   - 199: {fileID: 19954858}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Particle System (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

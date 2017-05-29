@@ -21,7 +21,7 @@ function DailyAttendancePanel.InitPanel()
 	gameObject:GetComponent('RectTransform').sizeDelta = Vector2.New(0, 0)
 
 	this.Button_close = transform:FindChild('Bg/Button_close').gameObject
-	this.gridParent = transform:FindChild('Bg/Scroll View/Viewport/Content').gameObject
+	this.Grid_Parent = transform:FindChild('Bg/Scroll View/Viewport/Content').gameObject
 end
 
 --单击事件--

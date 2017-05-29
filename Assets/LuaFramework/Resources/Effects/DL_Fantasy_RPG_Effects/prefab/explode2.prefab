@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 465986}
   - 198: {fileID: 19835186}
   - 199: {fileID: 19989996}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: explode2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26,7 +26,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 411514}
   - 108: {fileID: 10817760}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Point light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   - 4: {fileID: 444218}
   - 198: {fileID: 19844524}
   - 199: {fileID: 19951032}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Particle System (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

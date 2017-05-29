@@ -37,9 +37,9 @@ end
 
 --初始化完成，发送链接服务器信息--
 function Game.OnInitOK()
-    AppConst.SocketPort = 2012;
-    AppConst.SocketAddress = "127.0.0.1";
-    networkMgr:SendConnect();
+    -- AppConst.SocketPort = 2012;
+    -- AppConst.SocketAddress = "127.0.0.1";
+    -- networkMgr:SendConnect();
 
 
     Player = GameObject.FindWithTag("Player")
@@ -232,28 +232,28 @@ end
 
 -- ---------------------------------------------------------快捷键打印---------------------------------------------------------
 function Game.TestQ()
-    package.path = "D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
+    package.path = "D:/IDE/GitHubWorkSpace/Magicka/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
     package.loaded['TestKLS'] = nil
     local obj = require('TestKLS')
     obj:TestQ()
 end
 
 function Game.TestW()
-    package.path = "D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
+    package.path = "D:/IDE/GitHubWorkSpace/Magicka/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
     package.loaded['TestKLS'] = nil
     local obj = require('TestKLS')
     obj:TestW()
 end
 
 function Game.TestE()
-    package.path = "D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
+    package.path = "D:/IDE/GitHubWorkSpace/Magicka/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
     package.loaded['TestKLS'] = nil
     local obj = require('TestKLS')
     obj:TestE()
 end
 
 function Game.TestR()
-    package.path = "D:/IDE/Unity5WorkSpace/Magicka_LuaFramework_UGUI/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
+    package.path = "D:/IDE/GitHubWorkSpace/Magicka/Assets/LuaFramework/Lua/Logic/?.lua" --导入lua路径
     package.loaded['TestKLS'] = nil
     local obj = require('TestKLS')
     obj:TestR()
