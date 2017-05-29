@@ -1,0 +1,51 @@
+Data_Item = {
+	["10001"] = {
+		id = "10001",
+		name = "金币",
+		type = 1,
+		quality = 1,
+		description = "金币可以买东西，要充钱",
+		icon = "Textures/currency/currency1",
+	},
+	["10002"] = {
+		id = "10002",
+		name = "钻石",
+		type = 2,
+		quality = 1,
+		description = "钻石可以买东西，要充钱",
+		icon = "Textures/currency/currency2",
+	},
+	["10003"] = {
+		id = "10003",
+		name = "棋魂",
+		type = 3,
+		quality = 2,
+		description = "33333",
+		icon = "Textures/currency/currency3",
+	},
+	["10004"] = {
+		id = "10004",
+		name = "currency4",
+		type = 3,
+		quality = 2,
+		description = "44444",
+		icon = "Textures/currency/currency4",
+	},
+	["10005"] = {
+		id = "10005",
+		name = "currency5",
+		type = 3,
+		quality = 3,
+		description = "55555",
+		icon = "Textures/currency/currency5",
+	},
+	["10006"] = {
+		id = "10006",
+		name = "currency6",
+		type = 3,
+		quality = 4,
+		description = "66666",
+		icon = "Textures/currency/currency6",
+	},
+	
+}
