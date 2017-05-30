@@ -28,8 +28,14 @@ AssetBundleManifest:
       Name: reward.unity3d
       Dependencies: {}
     Info_7:
-      Name: prompt_asset.unity3d
+      Name: iteminfo.unity3d
       Dependencies: {}
     Info_8:
+      Name: bag.unity3d
+      Dependencies: {}
+    Info_9:
+      Name: prompt_asset.unity3d
+      Dependencies: {}
+    Info_10:
       Name: shared_asset.unity3d
       Dependencies: {}

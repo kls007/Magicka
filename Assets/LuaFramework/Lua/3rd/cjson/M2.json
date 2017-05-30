@@ -1,4 +1,5 @@
 {
 	"User":{"level":16,"roleid":10001,"gold":10,"diamond":20,"name":"竺文海","exp":30},
-	"DailyAttendance":{"currentDay":1,"lastAttendanceTime":0}
+	"DailyAttendance":{"currentDay":1,"lastAttendanceTime":0},
+	"Bag":[]
 }

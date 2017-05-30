@@ -168,7 +168,8 @@ public class Packager {
         AddBuildMap("skills" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Skills");
         AddBuildMap("dailyAttendance" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/DailyAttendance");
         AddBuildMap("reward" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Reward");
-
+        AddBuildMap("itemInfo" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/ItemInfo");
+        AddBuildMap("bag" + AppConst.ExtName, "*.prefab", "Assets/LuaFramework/Examples/Builds/Bag");
 
         AddBuildMap("prompt_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Prompt");
         AddBuildMap("shared_asset" + AppConst.ExtName, "*.png", "Assets/LuaFramework/Examples/Textures/Shared");

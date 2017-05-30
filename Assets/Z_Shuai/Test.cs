@@ -34,6 +34,9 @@ public class Test : MonoBehaviour {
         //EventTriggerListener.Get(image.gameObject).onClick =OnButtonClick;
 
         EventTriggerListener.Get(gameObject).onClick = OnButtonClick;
+        //gameObject.transform.childCount
+        //gameObject.transform.GetChild(0);
+        //gameObject.GetComponent<RectTransform>().sizeDelta.x 
     }
 
 

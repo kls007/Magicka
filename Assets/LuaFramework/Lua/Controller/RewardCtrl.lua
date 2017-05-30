@@ -12,7 +12,7 @@ end
 
 function Awake(...)
 	local args = {...}
-	list_dailyAttendance_id = args[1]
+	list_item = args[1]
 
 	panelMgr:CreatePanel('Reward', OnCreate)
 end
@@ -32,16 +32,17 @@ end
 --初始化面板--
 function InitPanel(objs)
 	local Prefab_DailyAttendanceItem = objs[0]
-	for i = 1, #list_dailyAttendance_id, 1 do
+	for i = 1, #list_item, 1 do
 		local go = GameObject.Instantiate(Prefab_DailyAttendanceItem)
 		go.name = tostring(i)
 		go.transform.parent = mView.Grid_Parent.transform
 		go.transform.localScale = Vector3.one
 		go.transform.localPosition = Vector3.zero
 
-		local dailyAttendance_id = list_dailyAttendance_id[i]
-		local count = Data_DailyAttendance[dailyAttendance_id].count
-		local item_id = Data_DailyAttendance[dailyAttendance_id].item_id
+		-- local dailyAttendance_id = list_dailyAttendance_id[i]
+		
+		local item_id = list_item[i].item_id --Data_DailyAttendance[dailyAttendance_id].item_id
+		local count = list_item[i].count --Data_DailyAttendance[dailyAttendance_id].count
 
 		local item = DailyAttendanceItem:new()
 		item:InitPanel(go)

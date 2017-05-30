@@ -7,6 +7,8 @@ CtrlNames = {
 	Skills = "SkillsCtrl",
 	DailyAttendance = "DailyAttendanceCtrl",
 	Reward = "RewardCtrl",
+	ItemInfo = "ItemInfoCtrl",
+	Bag = "BagCtrl"
 }
 
 PanelNames = {
@@ -17,6 +19,8 @@ PanelNames = {
 	"SkillsPanel",
 	"DailyAttendancePanel",
 	"RewardPanel",
+	"ItemInfoPanel",
+	"BagPanel"
 }
 
 --协议类型--

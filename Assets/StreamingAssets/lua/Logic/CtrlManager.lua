@@ -19,6 +19,8 @@ function CtrlManager.Init()
 	ctrlList[CtrlNames.Skills] = SkillsCtrl.New()
 	ctrlList[CtrlNames.DailyAttendance] = DailyAttendanceCtrl.New()
 	ctrlList[CtrlNames.Reward] = RewardCtrl.New()
+	ctrlList[CtrlNames.ItemInfo] = ItemInfoCtrl.New()
+	ctrlList[CtrlNames.Bag] = BagCtrl.New()
 	
 	return this
 end

@@ -57,6 +57,7 @@ function InitPanel(objs)
 		item:InitPanel(go)
 		item.Text_count.text = count
 		item.Text_name.text = DataTool.Get_Name(item_id)
+		item.Text_name.color = DataTool.Get_CommonColor(item_id)
 		item.Image_icon.sprite = DataTool.Get_Icon(item_id)
 		item.Image_frame.sprite = DataTool.Get_Frame(item_id)
 		item.Image_notcheck.gameObject:SetActive(false)
@@ -86,15 +87,23 @@ function OnItemClick(go)
 	local index = tonumber(go.name)
 	print_t(index, 'index')
 
+	local dailyAttendance_id = tostring(index)
+	local item_id = Data_DailyAttendance[dailyAttendance_id].item_id
+	local count = Data_DailyAttendance[dailyAttendance_id].count
+	Event.Brocast("Event_Reward", {{id = item_id, count = count}})
+
 	if index == currentDay and isCheck == false then
 		isCheck = true
 		go.transform:FindChild('Main/Image_notcheck').gameObject:SetActive(false)
 		go.transform:FindChild('Main/Image_check').gameObject:SetActive(true)
 
-		OpenCtrl(CtrlNames.Reward, {tostring(index)})
+		OpenCtrl(CtrlNames.Reward, {{item_id = tostring(item_id), count = count}})
 
 		M2.DailyAttendance.lastAttendanceTime = os.time()
 		Set_M2Data(M2)
+
+	else
+		OpenCtrl(CtrlNames.ItemInfo, {tostring(item_id)})
 	end
 end
 

@@ -26,6 +26,7 @@ function HUDPanel.InitPanel()
 	this.Text_level = transform:FindChild('PlayerInfo/Image_bg/Text_level').gameObject:GetComponent('Text')
 
 	this.Button_DailyAttendance = transform:FindChild('Buttons/Button_DailyAttendance').gameObject
+	this.Button_Bag = transform:FindChild('Buttons/Button_Bag').gameObject
 end
 
 --单击事件--

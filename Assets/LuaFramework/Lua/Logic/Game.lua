@@ -41,6 +41,8 @@ function Game.OnInitOK()
     -- AppConst.SocketAddress = "127.0.0.1";
     -- networkMgr:SendConnect();
 
+    M2Service.InitListener()
+
 
     Player = GameObject.FindWithTag("Player")
     Container3D = GameObject.FindWithTag("Container3D")

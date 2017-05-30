@@ -28,7 +28,7 @@ function HUDCtrl.OnCreate(obj)
 	
 
 	luabehaviour:AddClick(mView.Button_DailyAttendance, this.Click_Open_Attendance)
-
+	luabehaviour:AddClick(mView.Button_Bag, this.Click_Open_Bag)
 	
 end
 
@@ -45,6 +45,13 @@ function HUDCtrl.Click_Open_Attendance(go)
 	print_t(go, '打开签到')
 
 	OpenCtrl(CtrlNames.DailyAttendance)
+end
+
+--打开背包--
+function HUDCtrl.Click_Open_Bag(go)
+	print_t(go, '打开背包')
+
+	OpenCtrl(CtrlNames.Bag)
 end
 
 --关闭事件--
