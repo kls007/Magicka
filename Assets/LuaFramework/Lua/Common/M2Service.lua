@@ -7,16 +7,15 @@ end
 
 function M2Service.handler_M2(...)
 	local args = {...}
-	
 	local table_reward = args[1]
 	print_t(table_reward, 'table_reward')
 
-		for m, n in pairs(table_reward) do
-			local bag = Get_bagById(n.id)
+		for k, v in pairs(table_reward) do
+			local bag = Get_bagById(v.id)
 			if bag ~= nil then
-				bag.count = bag.count + n.count
+				bag.count = bag.count + v.count
 			else
-				table.insert(M2.Bag, n)
+				table.insert(M2.Bag, v)
 			end
 		end
 
@@ -25,7 +24,7 @@ end
 
 function Get_bagById(id)
 	for k, v in pairs(M2.Bag) do
-		if v.id == id then
+		if v.item_id == id then
 			return v
 		end
 	end

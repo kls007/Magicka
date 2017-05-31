@@ -24,20 +24,14 @@ function OnCreate(obj)
 	mView = ItemInfoPanel
 	luabehaviour = gameObject:GetComponent('LuaBehaviour')
 
-	luabehaviour:AddClick(mView.Button_close.gameObject, OnClick_close)
-
-	InitPanel()
-end
-
---初始化面板--
-function InitPanel()
 	local item_id = list_item_id[1]
-
 	mView.Text_name.text = DataTool.Get_Name(item_id)
 	mView.Text_name.color = DataTool.Get_CommonColor(item_id)
 	mView.Image_icon.sprite = DataTool.Get_Icon(item_id)
 	mView.Image_frame.sprite = DataTool.Get_Frame(item_id)
 	mView.Text_info.text = DataTool.Get_Info(item_id)
+
+	luabehaviour:AddClick(mView.Button_close.gameObject, OnClick_close)
 end
 
 --关闭--

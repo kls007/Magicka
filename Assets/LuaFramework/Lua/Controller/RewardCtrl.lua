@@ -39,10 +39,8 @@ function InitPanel(objs)
 		go.transform.localScale = Vector3.one
 		go.transform.localPosition = Vector3.zero
 
-		-- local dailyAttendance_id = list_dailyAttendance_id[i]
-		
-		local item_id = list_item[i].item_id --Data_DailyAttendance[dailyAttendance_id].item_id
-		local count = list_item[i].count --Data_DailyAttendance[dailyAttendance_id].count
+		local item_id = list_item[i].item_id
+		local count = list_item[i].count
 
 		local item = DailyAttendanceItem:new()
 		item:InitPanel(go)

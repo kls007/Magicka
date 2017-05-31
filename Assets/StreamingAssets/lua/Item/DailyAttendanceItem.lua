@@ -26,5 +26,4 @@ function DailyAttendanceItem:InitPanel(obj)
 	self.Image_check = self.transform:FindChild('Main/Image_check').gameObject:GetComponent('Image')
 end
 
-
 return DailyAttendanceItem

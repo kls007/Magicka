@@ -33,7 +33,6 @@ function OnCreate(obj)
 	print_t(table_cell, 'table_cell')
 	print_t(M2.Bag, 'M2.Bag')
 
-	-- resMgr:LoadPrefab('Bag', {'BagItem'}, InitPanel)
 	resMgr:LoadPrefab('dailyAttendance', {'DailyAttendanceItem'}, InitPanel)
 	luabehaviour:AddClick(mView.Button_close.gameObject, OnClick_close)
 end
@@ -45,13 +44,13 @@ function InitPanel(objs)
 	for i = 1, GetListNum(M2.Bag), 1 do
 		local go = GameObject.Instantiate(Prefab_BagItem)
 		go.name = tostring(i)
-		go.transform.parent = table_cell[i].transform--mView.Grid_Parent.transform
+		go.transform.parent = table_cell[i].transform
 		go.transform.localScale = Vector3.one
 		go.transform.localPosition = Vector3.zero
 
 		local Bag_id = tonumber(i)
 		local count = M2.Bag[Bag_id].count
-		local item_id = M2.Bag[Bag_id].id
+		local item_id = M2.Bag[Bag_id].item_id
 
 		local item = DailyAttendanceItem:new()
 		item:InitPanel(go)
