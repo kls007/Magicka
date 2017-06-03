@@ -64,9 +64,7 @@ function InitPanel(objs)
 		item.Image_check.gameObject:SetActive(false)
 
 
-		-- local pre = UnityEngine.Resources.Load("Prefabs/UI/effect")
-		-- local ggg = GameObject.Instantiate(pre, Vector3.zero, pre.transform.rotation)
-		-- ggg.transform.parent = go.transform
+		
 
 		if i < currentDay then
 			go.transform:FindChild('Main/Image_check').gameObject:SetActive(true)
@@ -75,22 +73,29 @@ function InitPanel(objs)
 				go.transform:FindChild('Main/Image_check').gameObject:SetActive(true)
 			else
 				go.transform:FindChild('Main/Image_notcheck').gameObject:SetActive(true)
+
+				local pre = UnityEngine.Resources.Load("Effects/DL_Fantasy_RPG_Effects/prefab/star111")
+				local ggg = GameObject.Instantiate(pre, Vector3.zero, pre.transform.rotation)
+				ggg.transform.parent = go.transform
+				ggg.transform.localPosition = Vector3.zero
+				ggg.transform.localScale = Vector3.one * 0.1
+
 			end
 		end
 
-		EventTriggerListener.Get(go.gameObject).onClick = OnItemClick
+		EventTriggerListener.Get(go.gameObject, i).onClick = OnItemClick
 	end
 end
 
 --关闭--
-function OnItemClick(go)
-	local index = tonumber(go.name)
+function OnItemClick(go, param)
+	local index = param
 	print_t(index, 'index')
 
 	local dailyAttendance_id = tostring(index)
 	local item_id = Data_DailyAttendance[dailyAttendance_id].item_id
 	local count = Data_DailyAttendance[dailyAttendance_id].count
-	Event.Brocast("Event_Reward", {{id = item_id, count = count}})
+	Event.Brocast("Event_Reward", {{item_id = item_id, count = count}})
 
 	if index == currentDay and isCheck == false then
 		isCheck = true

@@ -7,10 +7,12 @@ public class CameraFollow : MonoBehaviour {
     Transform target;
     Vector3 diff;
     public float followSpeed;
+    
 	void Awake () {
         mainCamera = GameObject.FindWithTag("MainCamera").transform;
         target = GameObject.FindWithTag("Player").transform;
         diff = mainCamera.position - target.position;
+        
     }
 	
 	void LateUpdate()

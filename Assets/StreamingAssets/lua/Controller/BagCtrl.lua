@@ -63,19 +63,18 @@ function InitPanel(objs)
 		item.Image_check.gameObject:SetActive(false)
 
 		local main = go.transform:FindChild('Main').gameObject:GetComponent("RectTransform")
-		print_t(main, 'main')
 		main.sizeDelta = Vector2.New(60, 60)
 
-		EventTriggerListener.Get(go.gameObject).onClick = OnItemClick
+		EventTriggerListener.Get(go.gameObject, i).onClick = OnItemClick
 	end
 end
 
 --关闭--
-function OnItemClick(go)
-	local index = tonumber(go.name)
+function OnItemClick(go, param)
+	local index = param
 	print_t(index, 'index')
 
-	local item_id = M2.Bag[index].id
+	local item_id = M2.Bag[index].item_id
 	OpenCtrl(CtrlNames.ItemInfo, {tostring(item_id)})
 end
 
