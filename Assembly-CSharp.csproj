@@ -269,7 +269,6 @@
      <Compile Include="Assets\Z_Shuai\PlayerAttack.cs" />
      <Compile Include="Assets\Z_Shuai\ScrollCircle.cs" />
      <Compile Include="Assets\Z_Shuai\ShortcutKeyDebugging.cs" />
-     <Compile Include="Assets\Z_Shuai\Test.cs" />
      <None Include="Assets\StreamingAssets\files.txt" />
      <None Include="Assets\LuaFramework\Resources\Effects\KY_effects\MagicEffectsPackFree\ReadMe.txt" />
      <None Include="Assets\LuaFramework\ToLua\readme.txt" />
