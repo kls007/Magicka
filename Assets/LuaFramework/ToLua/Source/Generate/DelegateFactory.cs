@@ -388,19 +388,21 @@ public static class DelegateFactory
 		public EventTriggerListener_VoidDelegate_Event(LuaFunction func) : base(func) { }
 		public EventTriggerListener_VoidDelegate_Event(LuaFunction func, LuaTable self) : base(func, self) { }
 
-		public void Call(UnityEngine.GameObject param0)
+		public void Call(UnityEngine.GameObject param0, object param1)
 		{
 			func.BeginPCall();
 			func.Push(param0);
+			func.Push(param1);
 			func.PCall();
 			func.EndPCall();
 		}
 
-		public void CallWithSelf(UnityEngine.GameObject param0)
+		public void CallWithSelf(UnityEngine.GameObject param0, object param1)
 		{
 			func.BeginPCall();
 			func.Push(self);
 			func.Push(param0);
+			func.Push(param1);
 			func.PCall();
 			func.EndPCall();
 		}
@@ -410,7 +412,7 @@ public static class DelegateFactory
 	{
 		if (func == null)
 		{
-			EventTriggerListener.VoidDelegate fn = delegate(UnityEngine.GameObject param0) { };
+			EventTriggerListener.VoidDelegate fn = delegate(UnityEngine.GameObject param0, object param1) { };
 			return fn;
 		}
 

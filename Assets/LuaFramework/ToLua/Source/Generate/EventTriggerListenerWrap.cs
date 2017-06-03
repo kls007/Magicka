@@ -15,6 +15,9 @@ public class EventTriggerListenerWrap
 		L.RegFunction("OnPointerUp", OnPointerUp);
 		L.RegFunction("OnSelect", OnSelect);
 		L.RegFunction("OnUpdateSelected", OnUpdateSelected);
+		L.RegFunction("OnDrag", OnDrag);
+		L.RegFunction("OnBeginDrag", OnBeginDrag);
+		L.RegFunction("OnEndDrag", OnEndDrag);
 		L.RegFunction("__eq", op_Equality);
 		L.RegFunction("__tostring", ToLua.op_ToString);
 		L.RegVar("onClick", get_onClick, set_onClick);
@@ -24,6 +27,9 @@ public class EventTriggerListenerWrap
 		L.RegVar("onUp", get_onUp, set_onUp);
 		L.RegVar("onSelect", get_onSelect, set_onSelect);
 		L.RegVar("onUpdateSelect", get_onUpdateSelect, set_onUpdateSelect);
+		L.RegVar("onDrag", get_onDrag, set_onDrag);
+		L.RegVar("onBeginDrag", get_onBeginDrag, set_onBeginDrag);
+		L.RegVar("onEndDrag", get_onEndDrag, set_onEndDrag);
 		L.RegFunction("VoidDelegate", EventTriggerListener_VoidDelegate);
 		L.EndClass();
 	}
@@ -33,9 +39,10 @@ public class EventTriggerListenerWrap
 	{
 		try
 		{
-			ToLua.CheckArgsCount(L, 1);
+			ToLua.CheckArgsCount(L, 2);
 			UnityEngine.GameObject arg0 = (UnityEngine.GameObject)ToLua.CheckUnityObject(L, 1, typeof(UnityEngine.GameObject));
-			EventTriggerListener o = EventTriggerListener.Get(arg0);
+			object arg1 = ToLua.ToVarObject(L, 2);
+			EventTriggerListener o = EventTriggerListener.Get(arg0, arg1);
 			ToLua.Push(L, o);
 			return 1;
 		}
@@ -156,6 +163,57 @@ public class EventTriggerListenerWrap
 			EventTriggerListener obj = (EventTriggerListener)ToLua.CheckObject(L, 1, typeof(EventTriggerListener));
 			UnityEngine.EventSystems.BaseEventData arg0 = (UnityEngine.EventSystems.BaseEventData)ToLua.CheckObject(L, 2, typeof(UnityEngine.EventSystems.BaseEventData));
 			obj.OnUpdateSelected(arg0);
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int OnDrag(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			EventTriggerListener obj = (EventTriggerListener)ToLua.CheckObject(L, 1, typeof(EventTriggerListener));
+			UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)ToLua.CheckObject(L, 2, typeof(UnityEngine.EventSystems.PointerEventData));
+			obj.OnDrag(arg0);
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int OnBeginDrag(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			EventTriggerListener obj = (EventTriggerListener)ToLua.CheckObject(L, 1, typeof(EventTriggerListener));
+			UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)ToLua.CheckObject(L, 2, typeof(UnityEngine.EventSystems.PointerEventData));
+			obj.OnBeginDrag(arg0);
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int OnEndDrag(IntPtr L)
+	{
+		try
+		{
+			ToLua.CheckArgsCount(L, 2);
+			EventTriggerListener obj = (EventTriggerListener)ToLua.CheckObject(L, 1, typeof(EventTriggerListener));
+			UnityEngine.EventSystems.PointerEventData arg0 = (UnityEngine.EventSystems.PointerEventData)ToLua.CheckObject(L, 2, typeof(UnityEngine.EventSystems.PointerEventData));
+			obj.OnEndDrag(arg0);
 			return 0;
 		}
 		catch(Exception e)
@@ -312,6 +370,63 @@ public class EventTriggerListenerWrap
 		catch(Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onUpdateSelect on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_onDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate ret = obj.onDrag;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onDrag on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_onBeginDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate ret = obj.onBeginDrag;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onBeginDrag on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int get_onEndDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate ret = obj.onEndDrag;
+			ToLua.Push(L, ret);
+			return 1;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onEndDrag on a nil value" : e.Message);
 		}
 	}
 
@@ -529,6 +644,99 @@ public class EventTriggerListenerWrap
 		catch(Exception e)
 		{
 			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onUpdateSelect on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_onDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate arg0 = null;
+			LuaTypes funcType2 = LuaDLL.lua_type(L, 2);
+
+			if (funcType2 != LuaTypes.LUA_TFUNCTION)
+			{
+				 arg0 = (EventTriggerListener.VoidDelegate)ToLua.CheckObject(L, 2, typeof(EventTriggerListener.VoidDelegate));
+			}
+			else
+			{
+				LuaFunction func = ToLua.ToLuaFunction(L, 2);
+				arg0 = DelegateFactory.CreateDelegate(typeof(EventTriggerListener.VoidDelegate), func) as EventTriggerListener.VoidDelegate;
+			}
+
+			obj.onDrag = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onDrag on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_onBeginDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate arg0 = null;
+			LuaTypes funcType2 = LuaDLL.lua_type(L, 2);
+
+			if (funcType2 != LuaTypes.LUA_TFUNCTION)
+			{
+				 arg0 = (EventTriggerListener.VoidDelegate)ToLua.CheckObject(L, 2, typeof(EventTriggerListener.VoidDelegate));
+			}
+			else
+			{
+				LuaFunction func = ToLua.ToLuaFunction(L, 2);
+				arg0 = DelegateFactory.CreateDelegate(typeof(EventTriggerListener.VoidDelegate), func) as EventTriggerListener.VoidDelegate;
+			}
+
+			obj.onBeginDrag = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onBeginDrag on a nil value" : e.Message);
+		}
+	}
+
+	[MonoPInvokeCallbackAttribute(typeof(LuaCSFunction))]
+	static int set_onEndDrag(IntPtr L)
+	{
+		object o = null;
+
+		try
+		{
+			o = ToLua.ToObject(L, 1);
+			EventTriggerListener obj = (EventTriggerListener)o;
+			EventTriggerListener.VoidDelegate arg0 = null;
+			LuaTypes funcType2 = LuaDLL.lua_type(L, 2);
+
+			if (funcType2 != LuaTypes.LUA_TFUNCTION)
+			{
+				 arg0 = (EventTriggerListener.VoidDelegate)ToLua.CheckObject(L, 2, typeof(EventTriggerListener.VoidDelegate));
+			}
+			else
+			{
+				LuaFunction func = ToLua.ToLuaFunction(L, 2);
+				arg0 = DelegateFactory.CreateDelegate(typeof(EventTriggerListener.VoidDelegate), func) as EventTriggerListener.VoidDelegate;
+			}
+
+			obj.onEndDrag = arg0;
+			return 0;
+		}
+		catch(Exception e)
+		{
+			return LuaDLL.toluaL_exception(L, e, o == null ? "attempt to index onEndDrag on a nil value" : e.Message);
 		}
 	}
 

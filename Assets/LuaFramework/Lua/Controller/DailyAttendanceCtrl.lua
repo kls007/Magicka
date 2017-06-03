@@ -74,7 +74,7 @@ function InitPanel(objs)
 			else
 				go.transform:FindChild('Main/Image_notcheck').gameObject:SetActive(true)
 
-				local pre = UnityEngine.Resources.Load("Effects/DL_Fantasy_RPG_Effects/prefab/star1")
+				local pre = UnityEngine.Resources.Load("Effects/DL_Fantasy_RPG_Effects/prefab/star111")
 				local ggg = GameObject.Instantiate(pre, Vector3.zero, pre.transform.rotation)
 				ggg.transform.parent = go.transform
 				ggg.transform.localPosition = Vector3.zero
@@ -83,13 +83,13 @@ function InitPanel(objs)
 			end
 		end
 
-		EventTriggerListener.Get(go.gameObject).onClick = OnItemClick
+		EventTriggerListener.Get(go.gameObject, i).onClick = OnItemClick
 	end
 end
 
 --关闭--
-function OnItemClick(go)
-	local index = tonumber(go.name)
+function OnItemClick(go, param)
+	local index = param
 	print_t(index, 'index')
 
 	local dailyAttendance_id = tostring(index)

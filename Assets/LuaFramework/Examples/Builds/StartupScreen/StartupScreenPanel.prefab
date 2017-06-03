@@ -10,7 +10,7 @@ GameObject:
   - 224: {fileID: 22433346}
   - 222: {fileID: 22244084}
   - 114: {fileID: 11477968}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ GameObject:
   - 224: {fileID: 22408672}
   - 222: {fileID: 22275380}
   - 114: {fileID: 11481320}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44,7 +44,7 @@ GameObject:
   - 224: {fileID: 22466616}
   - 222: {fileID: 22209830}
   - 114: {fileID: 11497066}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: StartupScreenPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - 224: {fileID: 22400908}
   - 222: {fileID: 22273540}
   - 114: {fileID: 11483462}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Image_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
